@@ -5,9 +5,8 @@ def Calc_Grades():
         grades_reader = list(csv.reader(grades, delimiter=","))
         
         for player in grades_reader:
-            if player[0] == "id":
-                pass # skip entry if it's the first entry
-            else:
+            if player[0] != "id": # skip entry if it's the first entry
+                
                 player_performance = [] # list of performance grades
                 
                 if len(player) >= 5:
